@@ -1,0 +1,37 @@
+{% extends 'sotrud/s.html' %}
+{%block 'pag'%}
+<title>Заказы</title>
+{%endblock%}
+{%block 'pa'%}
+<div class="col-md-5 col-lg-4 order-md-last">
+        {%for j in gw%}
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{j.user_name}}</font></font></h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{j.sur_name}}</font></font></h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{j.goro}}</font></font></h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+            <div class="text-success">
+              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{j.yl}}</font></font></h6>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+            <div class="text-success">
+              <h6 class="my-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">дом {{j.adre}}</font></font></h6>
+            </div>
+          </li>
+        </ul>
+        {%endfor%}
+      </div>
+{%endblock%}

@@ -1,0 +1,16 @@
+{% extends 'sotrud/s.html' %}
+{%block 'page'%}
+<title>Поиск и удаление товара</title>
+{%endblock%}
+{%block 'p'%}
+<h1>Поиск книг</h1>
+    <form method="post">
+        {%csrf_token%}
+        {{formv.as_p}}
+        <input type="submit" value="поиск">
+    </form>
+<p>{{name}}</p>
+<img src="{{im.url}}" alt="{{im}}">
+<p>{{har}}</p>
+<p>{{price}}</p>
+{%endblock%}

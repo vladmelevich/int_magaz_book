@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>заказать</title>
+</head>
+<body>
+<form method="post">
+    {%csrf_token%}
+    {{form1.as_p}}
+    <input type="submit" value="оформить">
+</form>
+<p>{{das}}</p>
+<a href="{%url 'glav'%}">на главную</a>
+</body>
+</html>
